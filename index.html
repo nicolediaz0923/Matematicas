@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diferencia de Cuadrados | Matemáticas Interactivas</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">∑ Matemáticas Interactivas</div>
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#teoria">Teoría</a>
+    <a href="#ejercicios">Ejercicios</a>
+    <a href="#evaluacion">Evaluación</a>
+  </nav>
+  <button id="themeBtn" class="icon-btn" aria-label="Cambiar tema">🌙</button>
+</header>
+
+<div class="progress-wrap"><div id="progress"></div></div>
+
+<main>
+<section id="inicio" class="hero">
+  <div class="breadcrumb">Matemáticas › Álgebra › Diferencia de cuadrados</div>
+  <div class="hero-grid">
+    <div>
+      <span class="tag">ÁLGEBRA</span>
+      <h1>Diferencia de cuadrados</h1>
+      <p class="lead">Aprende a reconocer y factorizar expresiones de la forma <strong>a² − b²</strong> de una manera sencilla, visual e interactiva.</p>
+      <div class="metrics">
+        <span>⏱ 15 min</span><span>📊 Nivel: Básico</span><span>🎯 Factorización</span>
+      </div>
+      <button class="primary" onclick="document.querySelector('#fundamento').scrollIntoView({behavior:'smooth'})">Comenzar lección →</button>
+    </div>
+    <div class="formula-card">
+      <div class="formula-label">IDENTIDAD FUNDAMENTAL</div>
+      <div class="formula">a² − b² = (a − b)(a + b)</div>
+      <p>Una resta de dos cuadrados perfectos se convierte en el producto de una diferencia y una suma.</p>
+    </div>
+  </div>
+</section>
+
+<section id="fundamento" class="section">
+  <div class="section-title"><span>01</span><div><small>FUNDAMENTO</small><h2>Reconoce los cuadrados perfectos</h2></div></div>
+  <div class="cards">
+    <article class="card"><div class="number">1</div><h3>Identifica la resta</h3><p>Debe existir una resta entre dos términos: <strong>A − B</strong>.</p></article>
+    <article class="card"><div class="number">2</div><h3>Comprueba los cuadrados</h3><p>Cada término debe poder escribirse como un número o expresión elevado al cuadrado.</p></article>
+    <article class="card"><div class="number">3</div><h3>Aplica la identidad</h3><p>Usa la regla: <strong>a² − b² = (a − b)(a + b)</strong>.</p></article>
+  </div>
+  <div class="flash"><strong>Ejemplo rápido:</strong>  x² − 16 = x² − 4² = <strong>(x − 4)(x + 4)</strong></div>
+</section>
+
+<section id="teoria" class="section alt">
+  <div class="section-title"><span>02</span><div><small>MARCO TEÓRICO</small><h2>¿Cómo funciona?</h2></div></div>
+  <div class="theory-grid">
+    <div class="explanation">
+      <h3>Regla principal</h3>
+      <p>La diferencia de cuadrados aparece cuando tenemos la resta de dos cantidades que son cuadrados perfectos.</p>
+      <div class="big-formula">a² − b² = (a − b)(a + b)</div>
+      <h3>Glosario</h3>
+      <ul>
+        <li><strong>a²:</strong> primer término cuadrado.</li>
+        <li><strong>b²:</strong> segundo término cuadrado.</li>
+        <li><strong>(a − b):</strong> diferencia de las raíces.</li>
+        <li><strong>(a + b):</strong> suma de las raíces.</li>
+      </ul>
+    </div>
+    <div class="visual">
+      <div class="visual-title">Ejemplo guiado</div>
+      <div class="step"><b>1</b><span>x² − 25</span></div>
+      <div class="arrow">↓</div>
+      <div class="step"><b>2</b><span>x² − 5²</span></div>
+      <div class="arrow">↓</div>
+      <div class="step"><b>3</b><span>(x − 5)(x + 5)</span></div>
+      <div class="result">✓ Factorización final</div>
+    </div>
+  </div>
+</section>
+
+<section id="simulador" class="section">
+  <div class="section-title"><span>03</span><div><small>SIMULADOR</small><h2>Experimenta con la fórmula</h2></div></div>
+  <div class="simulator">
+    <div class="controls">
+      <label>Valor de <b>a</b>: <output id="aOut">6</output></label>
+      <input id="aRange" type="range" min="2" max="15" value="6">
+      <label>Valor de <b>b</b>: <output id="bOut">3</output></label>
+      <input id="bRange" type="range" min="1" max="10" value="3">
+      <p class="hint">Mueve los controles y observa la factorización.</p>
+    </div>
+    <div class="sim-result">
+      <div id="expression" class="sim-expression">6² − 3² = 27</div>
+      <div id="factorization" class="factorization">(6 − 3)(6 + 3) = 27</div>
+      <div id="check" class="check">✓ Ambos resultados coinciden</div>
+    </div>
+  </div>
+</section>
+
+<section id="ejercicios" class="section alt">
+  <div class="section-title"><span>04</span><div><small>PRÁCTICA GUIADA</small><h2>Ejercicios resueltos</h2></div></div>
+  <div class="exercise-list">
+    <details open><summary>Nivel 1 · x² − 9</summary><div class="solution">x² − 3² → <strong>(x − 3)(x + 3)</strong></div></details>
+    <details><summary>Nivel 2 · 4x² − 25</summary><div class="solution">(2x)² − 5² → <strong>(2x − 5)(2x + 5)</strong></div></details>
+    <details><summary>Nivel 3 · 49y² − 36</summary><div class="solution">(7y)² − 6² → <strong>(7y − 6)(7y + 6)</strong></div></details>
+    <details><summary>Desafío · 100a² − 81b²</summary><div class="solution">(10a)² − (9b)² → <strong>(10a − 9b)(10a + 9b)</strong></div></details>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-title"><span>05</span><div><small>ERRORES COMUNES</small><h2>Evita estos errores</h2></div></div>
+  <div class="warning-grid">
+    <div class="warning">⚠️ <strong>No confundas:</strong> a² − b² sí se factoriza, pero a² + b² no sigue esta misma identidad.</div>
+    <div class="warning">⚠️ <strong>Revisa las raíces:</strong> antes de factorizar, comprueba que ambos términos sean cuadrados perfectos.</div>
+  </div>
+</section>
+
+<section id="evaluacion" class="section quiz-section">
+  <div class="section-title"><span>06</span><div><small>PRÁCTICA AUTÓNOMA</small><h2>Mini-test</h2></div></div>
+  <div id="quiz" class="quiz">
+    <p><strong>1.</strong> ¿Cuál es la factorización de x² − 16?</p>
+    <label><input type="radio" name="q1" value="a"> (x−4)(x+4)</label>
+    <label><input type="radio" name="q1" value="b"> (x−8)(x+8)</label>
+    <label><input type="radio" name="q1" value="c"> (x−2)(x+2)</label>
+
+    <p><strong>2.</strong> ¿Cuál es la forma de una diferencia de cuadrados?</p>
+    <label><input type="radio" name="q2" value="a"> a²+b²</label>
+    <label><input type="radio" name="q2" value="b"> a²−b²</label>
+    <label><input type="radio" name="q2" value="c"> (a−b)²</label>
+
+    <p><strong>3.</strong> Factoriza 25x²−9.</p>
+    <label><input type="radio" name="q3" value="a"> (5x−3)(5x+3)</label>
+    <label><input type="radio" name="q3" value="b"> (25x−9)(25x+9)</label>
+    <label><input type="radio" name="q3" value="c"> (5x−9)(5x+9)</label>
+    <button class="primary" onclick="checkQuiz()">Comprobar respuestas</button>
+    <div id="quizResult" class="quiz-result"></div>
+  </div>
+</section>
+
+<section class="section resources">
+  <div class="section-title"><span>07</span><div><small>RECURSOS</small><h2>Resumen de la lección</h2></div></div>
+  <div class="resource-card">
+    <h3>Fórmula para recordar</h3>
+    <p class="big-formula">a² − b² = (a − b)(a + b)</p>
+    <p>Busca dos cuadrados perfectos separados por una resta, encuentra sus raíces y forma un binomio con resta y otro con suma.</p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div><strong>∑ Matemáticas Interactivas</strong><br><small>Página educativa · Tema: Diferencia de cuadrados</small></div>
+  <div><small>Proyecto académico</small></div>
+</footer>
+</body>
+</html>
